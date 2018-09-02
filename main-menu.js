@@ -18,7 +18,7 @@ var dice = {
 var diceTwo = {
     sides: 3,
     rollTwo: function () {
-      var randomNumber = Math.ceil(Math.random() * this.sides) + 2;
+      var randomNumber = Math.floor(Math.random() * this.sides) + 1;
       // if ( number === 1) {
   
       // }
@@ -51,10 +51,8 @@ var button = document.getElementById('button');
 button.onclick = function() {
   var result = dice.roll();
   printNumber(result);
-//   var resultTwo = diceTwo.roll();
-//   printNumberTwo(resultTwo);
+  printNumberTwo(result);
 };
-
 
 
 
